@@ -1,5 +1,8 @@
-.wrapper {
+/* Preloader styles */
+.preloader {
     display: flex;
     justify-content: center;
-    padding: 10px;
+    align-items: center;
+    height: 100%;
+    width: 10%;
 }
