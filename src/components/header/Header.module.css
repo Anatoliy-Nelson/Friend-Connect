@@ -1,38 +1,34 @@
-.headerBlock {
+/* Header styles */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    border-radius: 5px;
-    background-color: var(--main-color-300);
-    box-shadow: var(--main-shadow-100)
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .logo {
-    width: 100px;
-}
-
-.loginInfo {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 10px;
-}
-.login {
-    color: var(--font-color-100);
+    gap: 8px;
 }
 
-.avatar {
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.userPhoto {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-}
-
-.link {
-    text-decoration: none;
-    &:visited {
-        all: unset;
-    }
+    object-fit: cover;
 }
