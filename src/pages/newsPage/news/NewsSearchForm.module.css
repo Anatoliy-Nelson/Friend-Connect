@@ -1,0 +1,44 @@
+/* News Search Form styles */
+.searchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.formRow {
+    display: flex;
+    gap: 16px;
+    align-items: end;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.formLabel {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.searchButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    align-self: flex-end;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
