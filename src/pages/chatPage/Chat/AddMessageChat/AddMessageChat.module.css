@@ -1,0 +1,15 @@
+.textarea {
+    margin: 20px 0 10px;
+    &:hover{
+        box-shadow: var(--main-shadow-200);
+    }
+}
+
+.button {
+    background-color: var(--main-color-400);
+    padding: 8px 15px;
+}
+
+.text {
+    color: var(--font-color-100);
+}

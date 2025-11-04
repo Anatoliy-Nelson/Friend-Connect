@@ -1,0 +1,11 @@
+.subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-color-400);
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color-500);
+}

@@ -1,0 +1,28 @@
+.newsWrapper {
+    border-radius: 5px;
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 220px auto 220px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.date {
+    grid-row-start: 1;
+    grid-column-start: 3;
+}
+
+.image {
+    width: 200px;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    border-radius: 5px;
+}

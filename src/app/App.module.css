@@ -1,0 +1,28 @@
+.container {
+    max-width: 1140px;
+    padding: 0 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 64px auto;
+    gap: 10px;
+}
+
+.menu {
+    grid-row-start: 2;
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    border-radius: 5px;
+    min-height: calc(100vh - 120px);
+    background-color: var(--main-color-100);
+    padding: 10px;
+}
+
+.content {
+    padding: 20px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    border-radius: 5px;
+}

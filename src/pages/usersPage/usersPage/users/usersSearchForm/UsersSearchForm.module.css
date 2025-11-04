@@ -1,0 +1,14 @@
+.formBlock {
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+
+.input {
+    max-width: 500px;
+}
+
+.select {
+    width: 250px;
+}

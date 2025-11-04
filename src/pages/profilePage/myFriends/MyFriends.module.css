@@ -1,0 +1,15 @@
+.wrapper {
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.friendsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}

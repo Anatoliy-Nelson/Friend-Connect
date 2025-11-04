@@ -1,0 +1,16 @@
+:root {
+    /*rgb(22, 72, 99)*/
+
+    --main-color-100: #DDF2FD; /*rgb(221, 242, 253)*/
+    --main-color-200: #9BBEC8; /*rgb(155, 190, 200)*/
+    --main-color-300: #427D9D; /*rgb(66, 125, 157)*/
+    --main-color-400: #164863; /*rgb(22, 72, 99)*/
+    --main-color-500: #04364A; /*rgb(4, 54, 74)*/
+    --font-color-100: #FFFFFF;
+    --error-color-100: #D71313;
+
+    /*shadow*/
+
+    --main-shadow-100: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --main-shadow-200: 1px 1px 10px 0 rgba(0, 0, 0, 0.5);
+}

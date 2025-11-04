@@ -1,0 +1,22 @@
+.contact {
+   padding: 5px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-color-400);
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color-500);
+
+
+}
+
+.text, a {
+    text-decoration: underline;
+    color: var(--main-color-300);
+}

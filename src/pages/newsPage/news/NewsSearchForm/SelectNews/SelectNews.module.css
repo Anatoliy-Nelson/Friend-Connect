@@ -1,0 +1,9 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 160px;
+}
+
+.label {
+    padding: 4px;
+    opacity: 0.8;
+}
