@@ -1,4 +1,13 @@
-.messagesBlock {
-    max-height: 70vh;
+/* Messages styles */
+.messagesContainer {
+    flex: 1;
     overflow-y: auto;
+    padding: 16px;
+    background-color: #f8f9fa;
+}
+
+.messagesList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
