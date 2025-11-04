@@ -1,11 +1,22 @@
-.pagination {
+/* News Page styles */
+.newsPage {
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.text {
-    padding-top: 50px;
+.newsContent {
+    display: flex;
+    flex: 1;
+}
+
+.newsList {
+    flex: 1;
+    padding: 16px;
+}
+
+.newsPagination {
+    padding: 16px;
     display: flex;
     justify-content: center;
 }
