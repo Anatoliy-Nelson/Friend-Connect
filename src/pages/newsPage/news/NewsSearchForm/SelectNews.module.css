@@ -1,0 +1,15 @@
+/* Select News styles */
+.selectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.selectLabel {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.select {
+    min-width: 200px;
+}
