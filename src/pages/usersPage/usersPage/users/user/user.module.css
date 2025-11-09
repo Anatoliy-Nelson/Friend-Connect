@@ -4,17 +4,18 @@
     flex-direction: column;
     align-items: center;
     padding: 16px;
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--main-color-200);
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--font-color-100, white);
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s;
+    transition: all 0.2s ease;
+    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
 }
 
 .user:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--main-shadow-200, 0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .userPhoto {
@@ -23,18 +24,20 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
+    border: 2px solid var(--main-color-300);
 }
 
 .userName {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 8px;
     text-align: center;
+    color: var(--main-color-500);
 }
 
 .userStatus {
     font-size: 12px;
-    color: #6c757d;
+    color: var(--main-color-300);
     text-align: center;
     margin-bottom: 12px;
 }
@@ -48,28 +51,34 @@
 
 .followButton {
     padding: 6px 12px;
-    border: 1px solid #007bff;
-    background-color: #007bff;
-    color: white;
+    border: 1px solid var(--main-color-300);
+    background-color: var(--main-color-300);
+    color: var(--font-color-100, white);
     border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .followButton:hover {
-    background-color: #0056b3;
+    background-color: var(--main-color-400);
+    border-color: var(--main-color-400);
 }
 
 .unfollowButton {
     padding: 6px 12px;
-    border: 1px solid #dc3545;
-    background-color: #dc3545;
-    color: white;
+    border: 1px solid var(--error-color-100);
+    background-color: var(--error-color-100);
+    color: var(--font-color-100, white);
     border-radius: 4px;
     cursor: pointer;
     font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .unfollowButton:hover {
-    background-color: #c82333;
+    background-color: #b21010;
+    border-color: #b21010;
 }
