@@ -1,13 +1,15 @@
-/* My Friends styles */
-.myFriends {
+.wrapper {
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    padding: 20px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 16px;
+    gap: 30px;
 }
 
-.friendsList {
+.friendsWrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }

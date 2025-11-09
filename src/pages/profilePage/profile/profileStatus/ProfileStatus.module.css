@@ -1,28 +1,11 @@
-/* Profile Status styles */
-.profileStatus {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    padding: 8px 12px;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    border: 1px solid #dee2e6;
+.subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-color-400);
 }
 
-.statusText {
-    color: #666;
-}
-
-.editStatusButton {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
-.editStatusButton:hover {
-    color: #0056b3;
+.text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-color-500);
 }

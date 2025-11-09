@@ -1,29 +1,15 @@
-/* Add Message Chat styles */
-.addMessageForm {
-    display: flex;
-    gap: 8px;
-    padding: 16px;
-    border-top: 1px solid #dee2e6;
-    background-color: #f8f9fa;
+.textarea {
+    margin: 20px 0 10px;
+    &:hover{
+        box-shadow: var(--main-shadow-200);
+    }
 }
 
-.messageInput {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
+.button {
+    background-color: var(--main-color-400);
+    padding: 8px 15px;
 }
 
-.sendMessageButton {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.sendMessageButton:hover {
-    background-color: #0056b3;
+.text {
+    color: var(--font-color-100);
 }

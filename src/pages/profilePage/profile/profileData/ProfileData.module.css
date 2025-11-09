@@ -1,24 +1,12 @@
-/* Profile Data styles */
-.profileData {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+.wrapper {
+    max-width: 300px;
+
 }
 
-.profileItem {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+.item {
+    padding: 15px 0;
 }
 
-.profileLabel {
-    font-weight: 500;
-    color: #666;
-}
-
-.profileValue {
-    color: #333;
+.contacts {
+    padding: 20px 0;
 }

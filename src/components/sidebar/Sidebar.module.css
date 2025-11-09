@@ -1,24 +1,8 @@
-/* Sidebar styles */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px;
-    background-color: var(--font-color-100, #f8f9fa);
-    min-width: 250px;
-    border: 1px solid var(--main-color-200);
-    border-radius: 8px;
-    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0.3));
-}
 
-.sidebarItem {
-    padding: 8px;
-    border: 1px solid var(--main-color-200);
-    border-radius: 4px;
-    background-color: var(--font-color-100, white);
-    transition: all 0.2s ease;
-}
 
-.sidebarItem:hover {
-    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
+.friends img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 5px;
 }

@@ -1,84 +1,41 @@
-/* User styles */
-.user {
+.card {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 10px;
+    border: 1px solid var(--main-color-100);
+    box-shadow: var(--main-shadow-100);
+
+    &:hover {
+        box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.5);
+    }
+}
+
+.link {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
-    border: 1px solid var(--main-color-200);
-    border-radius: 8px;
-    background-color: var(--font-color-100, white);
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.2s ease;
-    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
+    gap: 10px;
 }
 
-.user:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--main-shadow-200, 0 4px 8px rgba(0, 0, 0, 0.1));
-}
-
-.userPhoto {
-    width: 100px;
-    height: 100px;
+.img {
+    width: 140px;
     border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
-    border: 2px solid var(--main-color-300);
 }
 
-.userName {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 8px;
+.text {
     text-align: center;
-    color: var(--main-color-500);
+    word-break: break-all;
 }
 
-.userStatus {
-    font-size: 12px;
-    color: var(--main-color-300);
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.userButtons {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    width: 100%;
-}
-
-.followButton {
-    padding: 6px 12px;
-    border: 1px solid var(--main-color-300);
-    background-color: var(--main-color-300);
-    color: var(--font-color-100, white);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.followButton:hover {
+.buttonFollow {
     background-color: var(--main-color-400);
-    border-color: var(--main-color-400);
 }
 
-.unfollowButton {
-    padding: 6px 12px;
-    border: 1px solid var(--error-color-100);
-    background-color: var(--error-color-100);
-    color: var(--font-color-100, white);
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.unfollowButton:hover {
-    background-color: #b21010;
-    border-color: #b21010;
+.textButton {
+    color: var(--font-color-100);
 }

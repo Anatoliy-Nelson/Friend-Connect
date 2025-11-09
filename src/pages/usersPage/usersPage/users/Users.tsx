@@ -35,22 +35,32 @@ export const Users = () => {
         const friend = searchParams.get('friend')
 
         let actualPage = currentPage
-        if (page) actualPage = Number(page)
+        if (page && page !== 'undefined') actualPage = Number(page)
 
         let actualFilter = filter
-        if (term) {
+        if (term && term !== 'undefined') {
             actualFilter = { ...actualFilter, term: term }
         }
-        if (friend) {
+        if (friend && friend !== 'undefined') {
             actualFilter = { ...actualFilter, friend: friend === 'null' ? null : friend === 'true' }
         }
         dispatch(getUsersTC(actualPage, pageSize, actualFilter))
     }, [])
 
     useEffect(() => {
+        const searchParams = new URLSearchParams()
+        if (filter?.term && filter?.term !== 'undefined') {
+            searchParams.append('term', filter.term)
+        }
+        if (filter?.friend !== undefined && filter?.friend !== null) {
+            searchParams.append('friend', String(filter.friend))
+        } else if (filter?.friend === null) {
+            searchParams.append('friend', 'null')
+        }
+        searchParams.append('page', String(currentPage))
         navigate({
             pathname: '/users',
-            search: `?term=${filter?.term}&friend=${filter?.friend}&page=${currentPage}`
+            search: searchParams.toString()
         })
     }, [filter, currentPage])
 
@@ -59,20 +69,18 @@ export const Users = () => {
             <UsersSearchForm pageSize={pageSize} />
 
 
-            <PaginationPage currentPage={currentPage}
-                            totalCount={totalCount}
-                            filter={filter}
-            />
-
             {isFetching && <Preloader />}
 
             <div className={s.userWrapper}>
                 {users.map(user => <User key={user.id} user={user} />)}
             </div>
-            <PaginationPage currentPage={currentPage}
-                            totalCount={totalCount}
-                            filter={filter}
-            />
+            
+            {totalCount > pageSize && (
+                <PaginationPage currentPage={currentPage}
+                                totalCount={totalCount}
+                                filter={filter}
+                />
+            )}
         </>
     )
 }

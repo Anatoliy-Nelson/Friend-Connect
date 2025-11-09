@@ -1,16 +1,22 @@
-/* Contact styles */
 .contact {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
+   padding: 5px 0;
 }
 
-.contactTitle {
+.subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--main-color-400);
+}
+
+.text {
+    font-size: 16px;
     font-weight: 500;
-    color: #666;
+    color: var(--main-color-500);
+
+
 }
 
-.contactValue {
-    color: #333;
+.text, a {
+    text-decoration: underline;
+    color: var(--main-color-300);
 }

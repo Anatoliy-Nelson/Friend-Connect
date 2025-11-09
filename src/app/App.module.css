@@ -1,36 +1,28 @@
-/* App styles */
 .container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--main-color-100, #f8f9fa);
-    font-family: 'Source Sans Pro', sans-serif;
+    max-width: 1140px;
+    padding: 0 10px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 64px auto;
+    gap: 10px;
 }
 
 .menu {
-    background-color: var(--font-color-100, white);
-    box-shadow: var(--main-shadow-100, 0 2px 4px rgba(0, 0, 0, 0.1));
-    padding: 16px;
-    border-bottom: 1px solid var(--main-color-200);
+    grid-row-start: 2;
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    border-radius: 5px;
+    min-height: calc(100vh - 120px);
+    background-color: var(--main-color-100);
+    padding: 10px;
 }
 
 .content {
-    display: flex;
-    flex: 1;
-    gap: 16px;
-    padding: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-    background-color: var(--font-color-100, white);
-    border-radius: 8px;
-    margin-top: 16px;
-    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
-}
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        padding: 8px;
-    }
+    padding: 20px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    box-shadow: var(--main-shadow-100);
+    border: 1px solid var(--main-color-100);
+    border-radius: 5px;
 }
