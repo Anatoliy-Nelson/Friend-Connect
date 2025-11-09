@@ -37,20 +37,39 @@ export const Users = () => {
         let actualPage = currentPage
         if (page) actualPage = Number(page)
 
-        let actualFilter = filter
-        if (term) {
-            actualFilter = { ...actualFilter, term: term }
+        let actualFilter = {...filter} // Создаем копию фильтра
+        if (term !== null) { // Проверяем на null, а не на falsy
+            actualFilter = { ...actualFilter, term: term || '' }
         }
-        if (friend) {
+        if (friend !== null) { // Проверяем на null, а не на falsy
             actualFilter = { ...actualFilter, friend: friend === 'null' ? null : friend === 'true' }
         }
         dispatch(getUsersTC(actualPage, pageSize, actualFilter))
     }, [])
 
     useEffect(() => {
+        const params = new URLSearchParams()
+        
+        // Добавляем параметр page
+        params.set('page', currentPage.toString())
+        
+        // Добавляем параметр term, если он не пустой
+        if (filter?.term && filter.term !== '') {
+            params.set('term', filter.term)
+        } else {
+            params.set('term', '') // Устанавливаем пустую строку для термина
+        }
+        
+        // Добавляем параметр friend
+        if (filter?.friend === null) {
+            params.set('friend', 'null')
+        } else {
+            params.set('friend', filter.friend ? 'true' : 'false')
+        }
+        
         navigate({
             pathname: '/users',
-            search: `?term=${filter?.term}&friend=${filter?.friend}&page=${currentPage}`
+            search: `?${params.toString()}`
         })
     }, [filter, currentPage])
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.css'
+import 'antd/dist/antd.css' // Подключаем стили Ant Design
 import App from 'app/App'
 import { BrowserRouter } from 'react-router-dom'
 import { store } from 'redux/store'
