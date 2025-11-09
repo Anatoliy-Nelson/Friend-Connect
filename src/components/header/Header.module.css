@@ -1,34 +1,54 @@
 /* Header styles */
-.header {
+.headerBlock {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    background-color: #f8f9fa;
+    background-color: var(--main-color-100, #f8f9fa);
     border-bottom: 1px solid #dee2e6;
+    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
+    height: 40px;
 }
 
-.nav {
+.loginInfo {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.userInfo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.userPhoto {
+.avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid var(--main-color-300);
+}
+
+.button {
+    background-color: var(--main-color-300);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--main-color-400);
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login {
+    font-weight: 600;
+    color: var(--main-color-500);
 }
