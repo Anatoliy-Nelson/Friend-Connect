@@ -4,12 +4,17 @@
     flex-direction: column;
     gap: 24px;
     padding: 24px;
+    background-color: var(--font-color-100, white);
+    border-radius: 8px;
+    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
 }
 
 .profileHeader {
     display: flex;
     gap: 24px;
     align-items: flex-start;
+    border-bottom: 1px solid var(--main-color-200);
+    padding-bottom: 16px;
 }
 
 .profilePhoto {
@@ -17,6 +22,7 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid var(--main-color-300);
 }
 
 .profileInfo {
@@ -33,11 +39,12 @@
     font-size: 24px;
     font-weight: 600;
     margin: 0;
+    color: var(--main-color-500);
 }
 
 .profileStatus {
     font-size: 16px;
-    color: #666;
+    color: var(--main-color-400);
 }
 
 .profileData {
@@ -51,19 +58,22 @@
     align-items: center;
     gap: 8px;
     font-size: 14px;
+    padding: 4px 0;
 }
 
 .editProfileButton {
     padding: 8px 16px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--main-color-300, #007bff);
+    color: var(--font-color-100, white);
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .editProfileButton:hover {
-    background-color: #0056b3;
+    background-color: var(--main-color-400, #0056b3);
+    transform: translateY(-2px);
 }
