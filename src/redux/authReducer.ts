@@ -35,16 +35,21 @@ export const getCaptcha = (captchaUrl: string | null) => ({
 }) as const
 
 export const getAuthMe = (): AppThunk => async (dispatch) => {
-    const meData = await authAPI.me()
-    const profileData = await profileAPI.getUserProfile(meData.data.id)
     try {
-        const avatar = profileData?.photos?.large
-        if (meData.resultCode === ResultCode.SUCCESS) {
+        const meData = await authAPI.me()
+        if (meData.resultCode === ResultCode.SUCCESS && meData.data.id) {
+            const profileData = await profileAPI.getUserProfile(meData.data.id)
+            const avatar = profileData?.photos?.large
             const { id, login, email } = meData.data
             dispatch(setUserData({ id, email, login, isAuth: true, captchaUrl: null, avatar: avatar || null }))
+        } else if (meData.resultCode !== ResultCode.SUCCESS) {
+            // Если авторизация не удалась, все равно устанавливаем isInitialized
+            dispatch(setUserData({ id: null, email: null, login: null, isAuth: false, captchaUrl: null, avatar: null }))
         }
     } catch (e: unknown) {
         helpersError(e, dispatch)
+        // В случае ошибки все равно устанавливаем isInitialized, чтобы приложение не зависало
+        dispatch(setUserData({ id: null, email: null, login: null, isAuth: false, captchaUrl: null, avatar: null }))
     }
 }
 
