@@ -5,15 +5,21 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--main-color-300, #007bff);
+    color: var(--font-color-100, white);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: var(--main-shadow-100, 1px 1px 2px 0 rgba(0, 0, 0, 0.3));
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: var(--main-color-400, #0056b3);
+    transform: translateY(-2px);
+    box-shadow: var(--main-shadow-200, 1px 1px 10px 0 rgba(0, 0, 0, 0.5));
 }
 
 .button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    transform: none;
 }
