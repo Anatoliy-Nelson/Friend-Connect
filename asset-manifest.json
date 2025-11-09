@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Friend-Connect/static/css/main.7250c927.css",
-    "main.js": "/Friend-Connect/static/js/main.b937f314.js",
+    "main.js": "/Friend-Connect/static/js/main.0ad14b10.js",
     "static/media/source-sans-pro-latin-ext-400-normal.woff": "/Friend-Connect/static/media/source-sans-pro-latin-ext-400-normal.185cedfb4e64a9a8801a.woff",
     "static/media/source-sans-pro-latin-ext-700-normal.woff": "/Friend-Connect/static/media/source-sans-pro-latin-ext-700-normal.a72613fd5e96ed9e41cd.woff",
     "static/media/source-sans-pro-latin-ext-600-normal.woff": "/Friend-Connect/static/media/source-sans-pro-latin-ext-600-normal.7388c38c78f7a7897242.woff",
@@ -48,10 +48,10 @@
     "static/media/source-sans-pro-cyrillic-ext-700-normal.woff2": "/Friend-Connect/static/media/source-sans-pro-cyrillic-ext-700-normal.88f4c479ac07fe28684c.woff2",
     "index.html": "/Friend-Connect/index.html",
     "main.7250c927.css.map": "/Friend-Connect/static/css/main.7250c927.css.map",
-    "main.b937f314.js.map": "/Friend-Connect/static/js/main.b937f314.js.map"
+    "main.0ad14b10.js.map": "/Friend-Connect/static/js/main.0ad14b10.js.map"
   },
   "entrypoints": [
     "static/css/main.7250c927.css",
-    "static/js/main.b937f314.js"
+    "static/js/main.0ad14b10.js"
   ]
 }
