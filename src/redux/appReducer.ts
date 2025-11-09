@@ -20,15 +20,9 @@ export const appReducer = (state = initialState, action: ActionTypes): InitialSt
 export const setIsInitialized = () => ({ type: 'SET_INITIALIZED' }) as const
 export const setError = (error: string | null) => ({ type: 'SET-ERROR', error }) as const
 
-export const initializeApp = (): AppThunk => async (dispatch) => {
-    try {
-        await dispatch(getAuthMe())
-    } catch (error) {
-        // Даже если возникла ошибка при получении данных пользователя,
-        // все равно устанавливаем isInitialized, чтобы приложение продолжало работать
-    } finally {
-        dispatch(setIsInitialized())
-    }
+export const initializeApp = (): AppThunk => (dispatch) => {
+    dispatch(getAuthMe())
+    dispatch(setIsInitialized())
 }
 
 type InitialState = typeof initialState
