@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { useAppDispatch } from 'redux/store'
 import { Typography } from 'components/common'
 import { authorizedUserIdSelector } from 'pages/loginPage'
+import { getAuthMe } from 'redux/authReducer'
 import { MyFriends } from 'pages/profilePage/myFriends/MyFriends'
 
 type PathParams = {
@@ -29,8 +30,15 @@ export const ProfilePage = () => {
     }
     
     useEffect(() => {
-        refreshProfile().then()
-    }, [userId, authorizedUserId])
+        // Если пользователь заходит на свою страницу профиля (/profile) и еще не аутентифицирован
+        if (!userId && !authorizedUserId) {
+            dispatch(getAuthMe())
+        }
+        // Вызываем refreshProfile, когда authorizedUserId становится доступен
+        if ((userId && Number(userId)) || (authorizedUserId && !userId)) {
+            refreshProfile().then()
+        }
+    }, [userId, authorizedUserId, dispatch])
 
 
     let showFriends = id && authorizedUserId && (String(id) === String(authorizedUserId))
