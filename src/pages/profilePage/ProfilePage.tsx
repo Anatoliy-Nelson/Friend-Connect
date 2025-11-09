@@ -18,9 +18,8 @@ export const ProfilePage = () => {
     const { userId } = useParams<PathParams>()
     const dispatch = useAppDispatch()
 
-    const meId = String(authorizedUserId)
 
-    let id = userId ? Number(userId) : authorizedUserId
+    let id = userId ? Number(userId) : authorizedUserId || undefined
 
     const refreshProfile = async () => {
         if (id) {
@@ -28,12 +27,13 @@ export const ProfilePage = () => {
             dispatch(getStatus(id))
         }
     }
-
+    
     useEffect(() => {
         refreshProfile().then()
-    }, [userId])
+    }, [userId, authorizedUserId])
 
-    let showFriends = id && meId && (String(id) === meId)
+
+    let showFriends = id && authorizedUserId && (String(id) === String(authorizedUserId))
 
     return (
         <section>
