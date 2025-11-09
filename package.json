@@ -2,7 +2,7 @@
   "name": "samurai-way",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anatoliy-nelson.github.io/friendConnect/",
+  "homepage": "https://anatoliy-nelson.github.io/Friend-Connect/",
   "proxy": "https://social-network.samuraijs.com",
   "dependencies": {
     "@fontsource/source-sans-pro": "^5.0.8",
